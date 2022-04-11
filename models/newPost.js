@@ -19,6 +19,17 @@ newPost.init(
         content: {
             type: DataTypes.TEXT,
             allowNull: false
+        },
+        dateCreated: {
+            type: DataTypes.DATEONLY,
+            allowNull: false
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: "user",
+                key: "id"
+            }
         }
     },
     {

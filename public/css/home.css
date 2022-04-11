@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat+Alternates:ital,wght@1,300;1,600&family=Space+Mono:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+h2 {
+    font-family: 'Courgette', cursive;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Space Mono', monospace;
+}
+
+.title-text {
+    color: white
+}
+
+.post-container {
+    border: 2px solid black;
+}
+
+.border-box {
+    background-color: rgb(94, 61, 61);
+}
+
+.styled-font {
+    font-family: 'Courier New', Courier, monospace;
+}
