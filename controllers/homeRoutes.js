@@ -12,11 +12,11 @@ router.get('/', async (req, res) => {
         // serializing the data
         const posts = postData.map((post) => post.get({plain: true}));
         // rendering the posts
-        // res.render('accountPost', 
-        // {
-        //     posts,
-        //     logged_in: req.session.logged_in
-        // });
+        res.render('home', 
+        {
+            posts,
+            logged_in: req.session.logged_in
+        });
 
     } catch (err) {
         res.status(500).json(err);
