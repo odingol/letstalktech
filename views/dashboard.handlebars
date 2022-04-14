@@ -1,54 +1,20 @@
-<header id="home" class="w-100">
-    <nav class="navbar navbar-expand-lg navbar-dark p-4 d-flex justify-content-center"
-        style="background-color: rgb(128, 87, 87)">
-        <div class="p-0">
-            <div class="container-fluid d-flex justify-content-center">
-                <h2 style="color:rgba(255, 255, 255, 0.959)">LetsTalkTech</h2>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse form-inline" id="navbarMain">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item p-3">
-                        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Dashboard</a>
-                    </li>
-                    <li class="nav-item p-3">
-                        <a class="nav-link" href="#">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<main class="d-flex justify-content-center row m-0">
-    <section class="container my-5 post-container w-100 p-0 col-9 createSection">
-        <div class="d-flex justify-content-between border-box text-center title-text p-2">
-            <h3>Create New Post</h3>
-        </div>
-        <div class="my-4 p-2">
-            <h4>Title</h4>
-            <form>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="inputTitle">
-                </div>
-                <h4>Content</h4>
-                <div class="form-group">
-                    <textarea class="form-control" id="inputContent" rows="4"></textarea>
-                </div>
-            </form>
-             <div class="text-center">
-                    <button type="button" class="btn btn-secondary p-2" type="submit"><a href="#" style="color:white; text-decoration: none;"><h4>Create</h4></a></button>
-            </div>
-        </div>
-    </section>
-    <section class="w-100 text-center col-12 my-5">
-        <button type="button" class="btn btn-secondary p-3 createButton" type="submit">
+<section class="w-100 text-center col-10 my-5">
+    <button type="button" class="btn btn-secondary p-3 createButton" type="submit"><a href="/newPost"
+            style="color:white; text-decoration: none;">
             <h4>+ New Post</h4>
-        </button>
+        </a></button>
+</section>
+
+{{#each posts as |post|}}
+<section class="container w-100 p-0 col-9 createSection">
+    <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
+        <div class="d-flex justify-content-between border-box text-center title-text">
+            <h5><a href="/dashboard/{{post.id}}" style="color:white;">{{post.title}}</a></h5>
+            <p class="styled-font">posted by {{post.username}} on {{format_date post.dateCreated}}</p>
+        </div>
+        <div>
+            <p class="styled-font" style="font-weight:bold;">{{post.content}}</p>
+        </div>
     </section>
-</main>
+</section>
+{{#each}}
