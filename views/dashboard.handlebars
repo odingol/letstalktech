@@ -1,12 +1,12 @@
 <section class="w-100 text-center col-10 my-5">
-    <button type="button" class="btn btn-secondary p-3 createButton" type="submit"><a href="/newPost"
+    <button type="button" class="btn btn-secondary p-3" type="submit"><a href="/newPost"
             style="color:white; text-decoration: none;">
             <h4>+ New Post</h4>
         </a></button>
 </section>
 
 {{#each posts as |post|}}
-<section class="container w-100 p-0 col-9 createSection">
+<section class="container w-100 p-0 col-9">
     <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
         <div class="d-flex justify-content-between border-box text-center title-text">
             <h5><a href="/dashboard/{{post.id}}" style="color:white;">{{post.title}}</a></h5>

@@ -8,5 +8,26 @@
             <p class="styled-font" style="font-weight:bold;">{{post.content}}</p>
         </div>
     </section>
+
+    <section class="container my-5 post-container w-100 p-0">
+        <div class="d-flex justify-content-between border-box text-center title-text">
+            <h4>Comment:</h4>
+        </div>
+        <form class="commentForm" data-id="{{post.id}}">
+            <div class="form-group">
+                <textarea class="form-control" id="inputComment" rows="4"></textarea>
+            </div>
+        <button type="submit" class="btn btn-secondary w-100 mt-0" type="submit"><a href="#"
+                style="color:white; text-decoration: none;">
+                <h5>Submit</h5>
+            </a></button>
+        </form>
+    {{#each post.comments as |comment|}}
+        <div class="my-4 p-4" style="background-color: rgba(169, 156, 156, 0.591); color:white;">
+            <p class="styled-font" style="font-weight:bold;">{{comment.comment}} - created by {{comment.username}} on {{format_date comment.dateCreated}}</p>
+        </div>
+    {{/each}}
+    </section>
 </section>
 
+<script src="/js/comment.js"></script>

@@ -1,10 +1,10 @@
-<section class="container my-5 post-container w-100 p-0 col-9 createSection">
+<section class="container my-5 post-container w-100 p-0 col-9">
     <div class="d-flex justify-content-between border-box text-center title-text p-2">
         <h3>Create New Post</h3>
     </div>
     <div class="my-4 p-2">
         <h4>Title</h4>
-        <form>
+        <form class="postForm">
             <div class="form-group">
                 <input type="text" class="form-control" id="inputTitle">
             </div>
@@ -12,13 +12,13 @@
             <div class="form-group">
                 <textarea class="form-control" id="inputContent" rows="4"></textarea>
             </div>
-        </form>
         <div class="text-center">
-            <button type="button" class="btn btn-secondary p-2" type="submit"><a href="#"
+            <button type="submit" class="btn btn-secondary p-2" type="submit"><a href="#"
                     style="color:white; text-decoration: none;">
                     <h4>Create</h4>
                 </a></button>
         </div>
+        </form>
     </div>
 </section>
 <section class="w-100 text-center col-12 my-5">
@@ -26,3 +26,5 @@
         <h4>+ New Post</h4>
     </button>
 </section>
+
+<script src="/js/newPost.js"></script>
