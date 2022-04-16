@@ -3,7 +3,7 @@
 const updatedPost = async () => {
     const title = document.querySelector('#inputTitle').value.trim();
     const content = document.querySelector('#inputContent').value.trim();
-    const id = document.querySelector('#inputTitle').getElementById('data-id');
+    const id = document.querySelector('#inputTitle').getAttribute("data-id");
 
     if (title && content && id) {
         // Use a PUT request to the API endpoint
