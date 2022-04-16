@@ -7,6 +7,7 @@ const comment = document.querySelector("#inputComment").value.trim();
 const post_id = commentForm.getAttribute('data-id');
 
 if (comment && post_id) {
+    // Use a POST request for the api endpoint
     const respond = await fetch('/api/comment', {
         method: 'POST',
         body: JSON.stringify({

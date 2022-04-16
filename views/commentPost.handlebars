@@ -1,7 +1,7 @@
 <section class="container w-100 p-0 col-9 createSection">
     <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
         <div class="d-flex justify-content-between border-box text-center title-text">
-            <h5><a href="/dashboard/{{post.id}}" style="color:white;">{{post.title}}</a></h5>
+            <h5 style="color:white;">{{post.title}}</h5>
             <p class="styled-font">posted by {{post.username}} on {{format_date post.dateCreated}}</p>
         </div>
         <div>
@@ -24,7 +24,7 @@
         </form>
     {{#each post.comments as |comment|}}
         <div class="my-4 p-4" style="background-color: rgba(169, 156, 156, 0.591); color:white;">
-            <p class="styled-font" style="font-weight:bold;">{{comment.comment}} - created by {{comment.username}} on {{format_date comment.dateCreated}}</p>
+            <p class="styled-font" style="font-weight:bold;">{{comment.comment}} - posted by {{comment.username}} on {{format_date comment.dateCreated}}</p>
         </div>
     {{/each}}
     </section>
