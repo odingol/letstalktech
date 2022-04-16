@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/post/:id', withAuth, async (req, res) => {
+router.get('/newPost/:id', withAuth, async (req, res) => {
     try {
         const postData = await newPost.findOne({
            where: {id: req.params.id},
@@ -48,7 +48,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        // res.redirect('/');
+        res.redirect('/');
         return;
     } else {
     res.render('login');
@@ -57,7 +57,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
-        // res.redirect('/');
+        res.redirect('/');
         return;
     } else {
         res.render('signup');
@@ -86,7 +86,9 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
 router.get('/dashboard/newPost', withAuth, async (req, res) => {
     try {
-        res.render("newPost");
+        res.render("newPost", {
+            logged_in: req.session.logged_in
+        });
     } catch (err) {
         console.log('Error in creating a new post');
         res.status(500).json(err);

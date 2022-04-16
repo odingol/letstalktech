@@ -10,7 +10,7 @@ const createPostForm = async (event) => {
         const respond = await fetch('/api/post', {
             method: "POST",
             body: JSON.stringify({title, content}),
-            headers: {"Content-Type": "applicaton/json"}
+            headers: { "Content-Type": "applicaton/json" }
         });
 
         if (respond.ok) {
@@ -19,6 +19,6 @@ const createPostForm = async (event) => {
             alert(respond.statusText);
         }
     }
-}
+};
 
 document.querySelector("#postForm").addEventListener("submit", createPostForm);
