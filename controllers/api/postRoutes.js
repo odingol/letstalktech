@@ -34,7 +34,7 @@ router.put('/:id', withAuth, async (req, res) => {
         }
 
     } catch (err) {
-        console.log('Error in editing the request post')
+        console.log('Error in editing the request post!')
         res.status(500).json(err);
     }
 });
