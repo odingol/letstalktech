@@ -22,7 +22,8 @@ router.post('/', withAuth, async (req, res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        const updatePost = newPost.update(req.body, {
+        console.log('\n\n\nUPDATE POST\n', req.params.id, '\n', req.body)
+        const updatePost = await newPost.update(req.body, {
             where: {
                 id: req.params.id
             }
@@ -42,7 +43,7 @@ router.put('/:id', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-        const deletePost = newPost.destroy({
+        const deletePost = await newPost.destroy({
             where: {
                 id: req.params.id,
             }

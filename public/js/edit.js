@@ -13,11 +13,11 @@ const updatedPost = async () => {
                 title,
                 content
             }),
-            headers: {"Content-Type": "application/json'"}
+            headers: {"Content-Type": "application/json"}
         });
 
         if (respond.ok) {
-            document.location.replace('/dashboard');
+         document.location.replace('/dashboard');
         } else {
             alert(respond.statusText);
         }
