@@ -8,12 +8,12 @@
 {{#each posts as |post|}}
 <section class="container w-100 p-0 col-9">
     <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
-        <div class="d-flex justify-content-between border-box text-center title-text">
+        <div class="d-flex justify-content-between border-box text-center title-text p-2">
             <h5><a href="/dashboard/{{post.id}}" style="color:white;">{{post.title}}</a></h5>
             <p class="styled-font">posted by {{post.user.username}} on {{format_date post.dateCreated}}</p>
         </div>
         <div>
-            <p class="styled-font" style="font-weight:bold;">{{post.content}}</p>
+            <p class="styled-font p-2" style="font-weight:bold;">{{post.content}}</p>
         </div>
     </section>
 </section>

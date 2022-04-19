@@ -67,6 +67,7 @@ router.get('/signup', (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
         const postData = await newPost.findAll({
+            include: [User],
             where: {
                 user_id: req.session.user_id
             }

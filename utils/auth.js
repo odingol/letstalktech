@@ -3,7 +3,7 @@ const withAuth = (req, res, next) => {
     if (!req.session.logged_in) {
         res.redirect('/login');
     } else {
-    // next() is called when the user is logged in executes the next order into allowing the user to view the page 
+    // next() is called when the user is logged in and executes the next order into allowing the user to view the page 
         next();
     }
 };
