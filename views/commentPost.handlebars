@@ -23,8 +23,8 @@
             </a></button>
         </form>
     {{#each post.comments as |comment|}}
-        <div class="my-4 p-4" style="background-color: rgba(169, 156, 156, 0.591); color:white;">
-            <p class="styled-font" style="font-weight:bold;">{{comment.comment}} - posted by {{comment.user.username}} on {{format_date comment.dateCreated}}</p>
+        <div class="my-4 p-4" style="background-color: rgba(183, 69, 69, 0.591); color:white;">
+            <p class="styled-font" style="font-weight:bold;"><h5>{{comment.comment}}</h5> - posted by {{comment.user.username}} on {{format_date comment.dateCreated}}</p>
         </div>
     {{/each}}
     </section>
