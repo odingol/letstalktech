@@ -2,8 +2,8 @@
 <section class="container w-100 p-0 col-9 createSection">
     <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
         <div class="d-flex justify-content-between border-box text-center title-text">
-            <h4><a href="/dashboard/{{post.id}}" style="color:white;">{{post.title}}</a></h4>
-            <p class="styled-font">posted by {{post.username}} on {{format_date post.dateCreated}}</p>
+            <h4><a href="/newPost/{{post.id}}" style="color:white;">{{post.title}}</a></h4>
+            <p class="styled-font">posted by {{post.user.username}} on {{format_date post.dateCreated}}</p>
         </div>
         <div>
             <p class="styled-font" style="font-weight:bold;">{{post.content}}</p>

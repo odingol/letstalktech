@@ -9,9 +9,7 @@ router.get('/', withAuth, async (req, res) => {
             include: [User],
         });
 
-    const comments = commentData.map((commentData) => commentData.get({ plain: true }));
-
-    console.log(comments);
+    const comments = commentData.map((comment) => comment.get({ plain: true }));
 
     res.render('commentPost', {comments, logged_in: req.session.logged_in});
     } catch (err) {

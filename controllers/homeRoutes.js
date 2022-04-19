@@ -27,12 +27,12 @@ router.get('/newPost/:id', withAuth, async (req, res) => {
     try {
         const postData = await newPost.findOne({
            where: {id: req.params.id},
-           include: [User, {model: Comment, include: [User]}] 
+           include: [User, {model: Comment, include: [User]}], 
         })
 
         if (postData) {
             const post = postData.get({plain: true});
-            res.render('postComment', 
+            res.render('commentPost', 
             {
                 post, 
                 logged_in: req.session.logged_in
