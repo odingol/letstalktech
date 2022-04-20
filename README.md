@@ -22,9 +22,27 @@ SO THAT users can users can publish articles, blog posts, and their thoughts and
     
 This app is a CMS-style blog site  that functions similar to a Wordpress site. This allows developers can publish their blog posts and comment on other developers’ posts as well of their choosing. 
 
-<br>Here is the application's functionality:
+<br>The app is deployed on Heroku: 
 
-![Tech Blog Demo]() 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://letstalktechh.herokuapp.com/)
+
+<br>Here are a few screenshot's of the the application's functionality:
+
+![Tech Blog Home](/public/img/home-demo.png) 
+<br>
+<br>
+
+![Tech Blog Dashboard](/public/img/dashboard-demo.png) 
+<br>
+<br>
+
+![Tech Blog Comment](/public/img/comment-demo.png) 
+<br>
+<br>
+
+![Tech Blog Edit](/public/img/edit-demo.png) 
+<br>
+
 
 <br><br>
     
