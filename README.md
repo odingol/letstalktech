@@ -32,10 +32,6 @@ This app is a CMS-style blog site  that functions similar to a Wordpress site. T
 <br>
 <br>
 
-![Tech Blog Dashboard](/public/img/dashboard-demo.png) 
-<br>
-<br>
-
 ![Tech Blog Comment](/public/img/comment-demo.png) 
 <br>
 <br>
