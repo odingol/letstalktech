@@ -20,8 +20,8 @@ newPost.init(
             type: DataTypes.TEXT,
             allowNull: false
         },
-        dateCreated: {
-            type: DataTypes.DATEONLY,
+        date_created: {
+            type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW
         },
