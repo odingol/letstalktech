@@ -3,7 +3,7 @@
     <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
         <div class="d-flex justify-content-between border-box text-center title-text p-2">
             <h4><a href="/newPost/{{post.id}}" style="color:white;">{{post.title}}</a></h4>
-            <p class="styled-font">posted by {{post.user.username}} on {{format_date post.dateCreated}}</p>
+            <p class="styled-font">posted by {{post.user.username}} on {{format_date post.date_created}}</p>
         </div>
         <div>
             <p class="styled-font p-2" style="font-weight:bold;">{{post.content}}</p>

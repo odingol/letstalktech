@@ -2,7 +2,7 @@
     <section class="container my-5 post-container w-100 p-0" style="background-color:white;">
         <div class="d-flex justify-content-between border-box text-center title-text p-2">
             <h5 style="color:white;">{{post.title}}</h5>
-            <p class="styled-font">posted by {{post.user.username}} on {{format_date post.dateCreated}}</p>
+            <p class="styled-font">posted by {{post.user.username}} on {{format_date post.date_created}}</p>
         </div>
         <div>
             <p class="styled-font p-2" style="font-weight:bold;">{{post.content}}</p>
@@ -24,7 +24,7 @@
         </form>
     {{#each post.comments as |comment|}}
         <div class="my-4 p-4" style="background-color: rgba(183, 69, 69, 0.591); color:white;">
-            <p class="styled-font" style="font-weight:bold;"><h5>{{comment.comment}}</h5> - posted by {{comment.user.username}} on {{format_date comment.dateCreated}}</p>
+            <p class="styled-font" style="font-weight:bold;"><h5>{{comment.comment}}</h5> - posted by {{comment.user.username}} on {{format_date comment.date_created}}</p>
         </div>
     {{/each}}
     </section>
